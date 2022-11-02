@@ -4,7 +4,7 @@ import ColorBlock from './ColorBlock'
 import ColorForm from './ColorForm'
 
 function App() {
-  let [colors, setColors] = useState(['violet', 'blue', 'lightblue', 'green', 'greenyellow', 'yellow', 'orange', 'red'])
+  let [colors, setColors] = useState([])
   const addColor = (newColor) => {
     setColors([...colors, newColor])
   }

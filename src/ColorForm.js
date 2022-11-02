@@ -3,9 +3,18 @@ import React, {useState} from 'react'
 function ColorForm(props) {
     let [input, setInput] = useState('')
 
+    const isColor = (strColor) => {
+        const s = new Option().style
+        s.color = strColor
+        return s.color
+    }
+
     const handleSubmit = (e) => {
-        e.preventDefault()
+        let validColor = isColor(input)
+        if(validColor != ''){
         props.addColor(input)
+        }
+        e.preventDefault()
         setInput('')
     }
 
